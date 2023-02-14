@@ -1,0 +1,13 @@
+<h2>
+    Listado de Clientes
+</h2>
+<div *ngIf="! clientes.length">No Hay Clientes por el Momento</div>
+    <div>
+        <article *ngFor="let cliente of clientes">
+            <span>{{cliente.id}}</span>
+            <span>{{cliente.nombre}}</span>
+            <span>{{cliente.cif}}</span>
+            <span>{{cliente.direccion}}</span>
+            <span>{{cliente.grupo}}</span>
+        </article>
+    </div>

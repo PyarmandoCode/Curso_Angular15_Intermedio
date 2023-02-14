@@ -1,0 +1,25 @@
+<p>Este es el Componente 2</p>
+
+<h2>Directiva estructural *ngFor</h2>
+
+<b>Numeros</b>
+
+<p 
+  *ngFor="let item of numeros" >
+  {{ item }}
+</p>
+
+<b>Frutas:</b>
+
+<p
+  *ngFor="let f of frutas">
+  {{ f  }}
+</p>
+
+
+Insertar Frutas:
+<input [(ngModel)] = "fruta"  (keyup.enter) ="insertarFrutas();" type="text">
+
+<div [ngStyle]="currentStyles">
+    This div is initially italic, normal weight, and extra large (24px).
+</div>

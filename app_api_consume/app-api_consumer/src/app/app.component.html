@@ -1,0 +1,20 @@
+<h1>Consumo de Servicios</h1>
+<div *ngFor="let user of userList" >
+  <li>ID : {{user.id}}</li>
+  <li>Name : {{user.name}}</li>
+  <li>Username : {{user.username}}</li>
+  <li>Email : {{user.email}} <br></li>
+  <li>Addres</li>
+  <li>Direccion: {{user.address.street}}</li>
+  <li>Suite: {{user.address.suite}}</li>
+  <li>City: {{user.address.city}}</li>
+  <li>Zipcode: {{user.address.zipcode}}</li>
+  <li>Geolocation: </li>
+  <ul>
+    <li>Latitud: {{user.address.geo.lat}}</li>
+    <li>Latitud: {{user.address.geo.lng}}</li>
+  </ul>
+  <li>Phone:{{user.phone}}</li>
+  <li>Website:{{user.website}}</li>
+
+</div>

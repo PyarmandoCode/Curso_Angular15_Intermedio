@@ -1,0 +1,17 @@
+<h2>Uso de extraccion de datos entre Archivos</h2>
+
+<b>Empleados</b>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Puesto</th>
+        <th>Sueldo</th>
+    </tr>
+    <tr *ngFor="let item of empleados">
+        <td>{{item.nombre}}</td>
+        <td>{{item.puesto}}</td>
+        <td>{{item.sueldo}}</td>
+
+
+    </tr>
+</table>

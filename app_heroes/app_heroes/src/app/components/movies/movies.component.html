@@ -4,7 +4,12 @@
         <input type="text" #search placeholder="Buscar Pelicula">
         <img (click)="getMovies(search.value)" src="../../../assets/search.svg" alt="buscar">
     </div>
-    <div class="container">
+
+
+    <div *ngIf="movies.length>0; else empty" class="container">
         <app-cardmovie *ngFor="let moviee of movies" [movie]="moviee"></app-cardmovie>
     </div>
+    <ng-template #empty class="empty">
+        <h3>No Se encuentraron Peliculas!!!!</h3>
+    </ng-template>
 </div>

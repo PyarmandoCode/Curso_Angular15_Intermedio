@@ -19,6 +19,11 @@ export class MoviesComponent implements OnInit {
     this.movieService.getMovies(searchTeam).subscribe(data => {
       console.log(data);
       this.movies=data.Search;
+      if(data.Response == 'False') {
+        this.movies =[];
+      } else{
+        this.movies=data.Search;
+      }
     })
   }
 

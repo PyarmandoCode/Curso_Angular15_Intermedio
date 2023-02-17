@@ -1,0 +1,76 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="titulo"
+                  required
+                  [(ngModel)]="disco.titulo"
+                  name="titulo"
+                  placeholder="Titulo"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="titulo">Descripcion</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="descripcion"
+                  required
+                  [(ngModel)]="disco.descripcion"
+                  name="descripcion"
+                  placeholder="descripcion"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Imagen</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="imagen"
+                  required
+                  [(ngModel)]="disco.imagen"
+                  name="imagen"
+                  placeholder="imagen"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="precio"
+                  required
+                  [(ngModel)]="disco.precio"
+                  name="precio"
+                  placeholder="precio"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="autor">Autor</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="autor"
+                  required
+                  [(ngModel)]="disco.autor"
+                  name="autor"
+                  placeholder="autor"
+                />
+            </div>
+            <button (click)="savedisco();" class="btn btn-success" >Grabar</button>
+        </div>
+        <div *ngIf="submitted">
+            <h4>Disco se Grabo Correctamente</h4>
+            <button (click)="newdiscos();" class="btn btn-success" >Limpiar</button>
+        </div>
+    </div>
+</div>
+ 
